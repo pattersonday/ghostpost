@@ -23,12 +23,10 @@ def BoastsAndRoastsFormView(request):
         if form.is_valid():
             data = form.cleaned_data
             BoastsAndRoasts.objects.create(
-                # boasts_or_roasts=data['boasts_or_roasts'],
-                is_boast=data['is_boasts'],
+                is_boast=data['is_boast'],
                 content=data['content'],
                 upvote=data['upvote'],
-                downvote=data['downvote'],
-                post_data=timezone.now()
+                downvote=data['downvote']
             )
             return HttpResponseRedirect(reverse('homepage'))
 
