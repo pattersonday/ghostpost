@@ -23,8 +23,8 @@ def BoastsAndRoastsFormView(request):
         if form.is_valid():
             data = form.cleaned_data
             BoastsAndRoasts.objects.create(
-                boasts_or_roasts=data['boasts_or_roasts'],
-                is_boasts=data['is_boasts'],
+                # boasts_or_roasts=data['boasts_or_roasts'],
+                is_boast=data['is_boasts'],
                 content=data['content'],
                 upvote=data['upvote'],
                 downvote=data['downvote'],
@@ -35,4 +35,3 @@ def BoastsAndRoastsFormView(request):
     form = BoastsAndRoastsAddForm()
 
     return render(request, html, {'form': form})
-

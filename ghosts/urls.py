@@ -24,4 +24,6 @@ admin.site.register(BoastsAndRoasts)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='homepage'),
+    path('boastandroastform/', views.BoastsAndRoastsFormView,
+         name='boastandroastform')
 ]
