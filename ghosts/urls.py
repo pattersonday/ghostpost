@@ -25,5 +25,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='homepage'),
     path('boastandroastform/', views.BoastsAndRoastsFormView,
-         name='boastandroastform')
+         name='boastandroastform'),
+    path('upvote/<int:id>', views.UpvoteAddView, name='upvote'),
+    path('downvote/<int:id>', views.DownvoteAddView, name='downvote'),
+    path('netvotes/', views.NetVotes, name='netvote'),
+    path('allboasts/', views.Boasts, name='allboasts'),
+    path('allroasts/', views.Roasts, name='allroasts')
 ]

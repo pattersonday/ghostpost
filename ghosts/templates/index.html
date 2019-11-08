@@ -5,7 +5,19 @@
     {% for data in boastsandroasts %}
         <ul>
             <h1>{{ data.content }}</h1>
-            
+            {% if data.is_boast %}
+                <h2>Boast</h2>
+            {% else %}
+                <h2>Roast</h2>
+            {% endif %}
+            <div>
+                <h3>{{ data.upvote }}</h3>
+                <button><a href='/upvote/{{ data.id }}'>Upvote</button>
+                <h3>{{ data.downvote }}</h3>
+                <button><a href='/downvote/{{ data.id }}'>Downvote</button>
+                <h3>{{ data.total_votes }}</h3>
+            </div>
+            <h4>{{data.post_date}}</h4>
         </ul>
     {% endfor %}
 </ul>

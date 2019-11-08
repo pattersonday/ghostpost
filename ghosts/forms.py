@@ -7,13 +7,10 @@ class BoastsAndRoastsAddForm(forms.ModelForm):
         model = BoastsAndRoasts
         fields = [
             'is_boast',
-            'content',
-            'upvote',
-            'downvote',
-            'post_date'
+            'content'
         ]
         widgets = {
-            'Roast': forms.RadioSelect
+            'is_boast': forms.RadioSelect
         }
 
 
