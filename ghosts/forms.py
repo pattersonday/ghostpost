@@ -10,7 +10,7 @@ class BoastsAndRoastsAddForm(forms.ModelForm):
             'content'
         ]
         widgets = {
-            'is_boast': forms.RadioSelect
+            'boast_or_roast': forms.RadioSelect
         }
 
 
