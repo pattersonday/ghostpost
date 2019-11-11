@@ -13,9 +13,9 @@
             <h2>Roast</h2>
         {% endif %}
         <li>{{ data.upvote }}</li>
-        <li><button><a href='/upvote/{{ data.id }}'>Upvote</button></li>
+        <li><button><a href='/upvote/{{ data.id }}'>Upvote</a></button></li>
         <li>{{ data.downvote }}</li>
-        <li><button><a href='/downvote/{{ data.id }}'>Downvote</button></li>
+        <li><button><a href='/downvote/{{ data.id }}'>Downvote</a></button></li>
         <li>{{ data.total_votes }}</li>
         <li><button><a href='/delete/{{ data.id }}'>Delete Post</a></button></li>
         <li>{{ data.post_date }}</li>
