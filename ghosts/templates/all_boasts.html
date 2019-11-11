@@ -1,5 +1,18 @@
 <a href='/'>Home Page</a>
-<a href='/boastandroastform/'>Contribute some shizz?</a>
-<a href='/allroasts/'>See the roasts?</a>
+<a href='/boastandroastform/'>Contribute some shizz</a>
+<a href='/allroasts/'>See the roasts</a>
 <a href='/netvotes/'>List of net votes</a>
+
+<h1>All of the Boasts</h1>
+
+{% for data in all_boasts %}
+    <ul>
+        <h1>{{ data.content }}</h1>
+        <h3>Upvotes: {{ data.upvote }}</h3>
+        <h3>Downvotes: {{ data.downvote }}</h3>
+        <h3>Total Votes: {{ data.total_votes }}</h3>
+        <h4>{{ data.post_date }}</h4>
+    </ul>
+{% endfor %}
+
 

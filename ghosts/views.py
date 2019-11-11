@@ -78,12 +78,8 @@ def Boasts(request):
 
     html = 'all_boasts.html'
 
-    all_boasts = BoastsAndRoasts.objects.filter(
+    all_boasts = BoastsAndRoasts.objects.all().filter(
         is_boast=True).order_by('-post_date')
-
-    return HttpResponseRedirect(reverse('allboasts'))
-
-    all_boasts = Boasts()
 
     return render(request, html, {'all_boasts': all_boasts})
 
@@ -92,12 +88,8 @@ def Roasts(request):
 
     html = 'all_roasts.html'
 
-    all_roasts = BoastsAndRoasts.objects.filter(
+    all_roasts = BoastsAndRoasts.objects.all().filter(
         is_boast=False).order_by('-post_date')
-
-    return HttpResponseRedirect(reverse('allroasts'))
-
-    all_roasts = Roasts()
 
     return render(request, html, {'all_roasts': all_roasts})
 
@@ -107,9 +99,5 @@ def NetVotes(request):
     html = 'net_votes.html'
 
     net_votes = BoastsAndRoasts.objects.all().order_by('-post_date')
-
-    return HttpResponseRedirect(reverse('netvote'))
-
-    net_votes = NetVotes()
 
     return render(request, html, {'net_votes': net_votes})
