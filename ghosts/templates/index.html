@@ -12,13 +12,11 @@
         {% else %}
             <h2>Roast</h2>
         {% endif %}
-        <h3>{{ data.upvote }}</h3>
-        <li>
-        <button><a href='/upvote/{{ data.id }}'>Upvote</button>
-        </li>
-        <h3>{{ data.downvote }}</h3>
-        <button><a href='/downvote/{{ data.id }}'>Downvote</button>
-        <h3>{{ data.total_votes }}</h3>
-        <h4>{{ data.post_date }}</h4>
+        <li>{{ data.upvote }}</li>
+        <li><button><a href='/upvote/{{ data.id }}'>Upvote</button></li>
+        <li>{{ data.downvote }}</li>
+        <li><button><a href='/downvote/{{ data.id }}'>Downvote</button></li>
+        <li>{{ data.total_votes }}</li>
+        <li>{{ data.post_date }}</li>
     {% endfor %}
 </ul>

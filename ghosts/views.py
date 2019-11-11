@@ -98,6 +98,6 @@ def NetVotes(request):
 
     html = 'net_votes.html'
 
-    net_votes = BoastsAndRoasts.objects.all().order_by('-post_date')
+    net_votes = BoastsAndRoasts.objects.all().order_by('-total_votes')
 
     return render(request, html, {'net_votes': net_votes})
