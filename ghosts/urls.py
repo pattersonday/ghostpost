@@ -30,5 +30,6 @@ urlpatterns = [
     path('downvote/<int:id>', views.DownvoteAddView, name='downvote'),
     path('netvotes/', views.NetVotes, name='netvote'),
     path('allboasts/', views.Boasts, name='allboasts'),
-    path('allroasts/', views.Roasts, name='allroasts')
+    path('allroasts/', views.Roasts, name='allroasts'),
+    path('delete/<int:id>', views.DeletePost, name='delete')
 ]

@@ -101,3 +101,16 @@ def NetVotes(request):
     net_votes = BoastsAndRoasts.objects.all().order_by('-total_votes')
 
     return render(request, html, {'net_votes': net_votes})
+
+
+def DeletePost(request, id):
+
+    deleting = BoastsAndRoasts.objects.get(id=id)
+
+    deleting.delete()
+
+    return HttpResponseRedirect(reverse('homepage'))
+
+    deleting = DeletePost()
+
+    return render(request, {'deleting': deleting})
